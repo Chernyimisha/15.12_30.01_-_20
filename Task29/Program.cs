@@ -3,9 +3,11 @@
 
 int[] array = new int[8];
 FillArray(array);
-PrintArray1(array);
+PrintArray(array);
 Console.Write(" -> ");
-PrintArray2(array);
+Console.Write("[");
+PrintArray(array);
+Console.Write("]");
 
 void FillArray(int[] collection)
 {
@@ -17,7 +19,7 @@ void FillArray(int[] collection)
     }
 }
 
-void PrintArray1(int[] col)
+void PrintArray(int[] col)
 {
     int count = col.Length;
     int position = 0;
@@ -29,19 +31,4 @@ void PrintArray1(int[] col)
     }
 
     Console.Write($"{col[count-1]}");
-    
-}
-
-void PrintArray2(int[] col)
-{
-    int count = col.Length;
-    int position = 0;
-    Console.Write("{");
-    while (position < count-1)
-    {
-        Console.Write($"{col[position]},");
-        position++;
-    }
-    Console.Write($"{col[count-1]}");
-    Console.Write("}");
 }

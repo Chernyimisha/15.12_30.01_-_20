@@ -7,7 +7,7 @@ Console.WriteLine ("Введите число А: ");
 int digit = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine ("Введите натуральное число B: ");
 int degree = Convert.ToInt32(Console.ReadLine());
-double power = 0;
+int power = 0;
 Console.WriteLine ();
 
 if (degree>0)
@@ -17,8 +17,12 @@ if (degree>0)
 }
 else Console.WriteLine ("Введено некорректное число В");
 
-double Pow (int A, int B)
+int Pow (int A, int B)
 {
-    double result = Math.Pow(A, B);
+    int result = A;
+    for(int i=1; i<B;i++)
+    {
+        result = result*A;
+    }
     return result;
 }
