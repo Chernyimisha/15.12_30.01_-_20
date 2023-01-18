@@ -13,10 +13,14 @@ Console.WriteLine($"Количество цифр в числе {number} = {quan
 int QuantityDigit(int num)
 {
     int sum = 0;
-    while (num != 0)
+    if (num !=0)
     {
-       num = num/10;
-       sum++;
+        while (num != 0)
+        {
+            num = num/10;
+            sum++;
+        }
+        return sum;
     }
-    return sum;
+    else return 1;
 }
