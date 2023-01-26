@@ -22,7 +22,8 @@ Console.Write($"b1={a}, k1={b}, b2={c}, k2={d} -> ({coordinate[0]},{coordinate[1
 double[] CalcCoordinate(int b1, int k1, int b2, int k2)
 {
     double[] arr = new double[2];
-    arr[0] = (double)(b2 - b1) / (k1 - k2);
+    double temp = (double)(b2 - b1) / (k1 - k2);
+    arr[0] = Math.Round (temp,1);
     arr[1] = k1 * arr[0] + b1;
     return arr;
 }
