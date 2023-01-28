@@ -4,17 +4,41 @@
 // 3 -> 11
 // 2 -> 10
 
-string СonvNumber(int number)
+// Вариант решения с помощью типа String///////////////////
+
+// string СonvNumber(int number)
+// {
+//     string result = string.Empty;
+//     while (number > 0)
+//     {
+//         result = number % 2 + result;
+//         number = number / 2;
+//     }
+//     return result;
+// }
+
+// string res = СonvNumber(2);
+
+// Console.WriteLine(res);
+
+// Вариант решения с помощью типа Int//////////////////
+
+Console.Write("Введите число для преобразования в двоичную систему исчисления: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int convertDecimalToBinary = ConvertDecimalToBinary(number);
+Console.WriteLine(convertDecimalToBinary);
+
+int ConvertDecimalToBinary(int num)
 {
-    string result = string.Empty;
-    while (number > 0)
+    int result = 0;
+    int multiplyer = 1;
+
+    while (num != 0)
     {
-        result = number % 2 + result;
-        number = number / 2;
+        result = result + num % 2 * multiplyer;
+        num = num / 2;
+        multiplyer *= 10;
     }
     return result;
 }
-
-string res = СonvNumber(2);
-
-Console.WriteLine(res);
