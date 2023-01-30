@@ -9,9 +9,9 @@
 // 1, 7 -> такого элемента
 // в массиве нет
 
-Console.WriteLine("Укажите положение элемента по горизонтали: ");
-int x = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Укажите положение элемента по вертикали: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Укажите положение элемента по горизонтали: ");
 int y = Convert.ToInt32(Console.ReadLine());
 
 int rows = new Random().Next(1, 5);
