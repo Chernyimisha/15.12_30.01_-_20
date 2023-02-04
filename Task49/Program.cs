@@ -19,6 +19,7 @@ Console.WriteLine();
 Console.WriteLine("Новая матрица будет выглядеть вот так:");
 int[,] secondMatrix = MatrixTransformation(firstMatrix);
 PrintMatrix(secondMatrix);
+
 int[,] CreateMatrix(int rows, int columns, int min, int max)
 {
     int[,] matrix = new int[rows, columns];

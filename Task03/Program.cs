@@ -2,8 +2,10 @@
 //название дня недели по заданному номеру.
 //3 -> Среда
 //5 -> Пятница
+
 Console.WriteLine("Введите целое число от 1 до 7 включительно");
-String number = Console.ReadLine();
+string number = Console.ReadLine();
+
 if (number == "1")
 {
     Console.WriteLine("Понедельник");

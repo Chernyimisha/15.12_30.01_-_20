@@ -22,7 +22,11 @@ int CountMinElemArray(int[] arr)
     int minElemIndex = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] < minElem) minElemIndex = i;
+        if (arr[i] < minElem)
+        {
+            minElem = arr[i];
+            minElemIndex = i;
+        }
     }
     return minElemIndex;
 }

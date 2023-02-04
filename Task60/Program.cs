@@ -19,17 +19,21 @@ int mx = Convert.ToInt32(Console.ReadLine());
 int sizeCube = r * c * d;
 int[,,] array3D = new int[r, c, d];
 
-if (r * c * d < mx - mn - 1)
+if (mn > 9 && mx < 100)
 {
-    array3D = CreateCube(r, c, d, mn, mx);
-    PrintCube(array3D);
+    if (r * c * d < mx - mn) //если размер массива укладывается в возможный диапазон элементов
+    {
+        array3D = CreateCube(r, c, d, mn, mx);
+        PrintCube(array3D);
+    }
+    else Console.WriteLine("Трехмерный массив, с указанными параметрами невозможно заполнить неповторяющимися числами.");
 }
-else Console.WriteLine("Трехмерный массив, с указанными параметрами невозможно заполнить неповторяющимися числами");
+else Console.WriteLine("Задан неверный диапазон элементов массива. Массив необходимо заполнить двузначными числами.");
+
 
 int[,,] CreateCube(int rows, int columns, int depth, int min, int max)
 {
     int[,,] cube = new int[rows, columns, depth];
-    //Random rnd = new Random();
     int count = min;
 
     if (cube.Length < max - min - 1)
